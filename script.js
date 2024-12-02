@@ -4,7 +4,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
   splashImage.src = "images/lahaine.gif?" + new Date().getTime();
 
-  setTimeout(() => {
-    splash.classList.add("display-none");
-  }, 5690);
+  splashImage.onload = () => {
+
+    setTimeout(() => {
+      splash.classList.add("display-none");
+    }, splashImage.naturalDuration || 5610);
+  };
 });
