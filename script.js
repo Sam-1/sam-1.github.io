@@ -1,15 +1,15 @@
 document.addEventListener("DOMContentLoaded", () => {
-  const splash = document.querySelector(".splash");
-  const splashImage = document.querySelector("#splash");
+  const loading = document.querySelector(".loading");
+  const loadingImage = document.querySelector("#loadingImage");
 
-  splashImage.src = "images/lahaine.gif?v=" + new Date().getTime();
+  loadingImage.src = "images/lahaine.gif?v=" + new Date().getTime();
 
-  splashImage.onload = () => {
-    const gifDuration = splashImage.naturalDuration || 5610;
+  loadingImage.onload = () => {
+    const gifDuration = loadingImage.naturalDuration || 5610;
 
     window.requestAnimationFrame(() => {
       setTimeout(() => {
-        splash.classList.add("display-none");
+        loading.classList.add("display-none");
       }, gifDuration);
     });
   };
